@@ -9,8 +9,8 @@ cc_library(
 
 cc_library(
     name="server_lib",
-    srcs=glob(["src/**/*.hh"]),
-    hdrs=glob(["src/**/*.hh"]),
+    srcs=glob(["src/server/**/*.hh"]),
+    hdrs=glob(["src/server/**/*.hh"]),
     deps = [":libuvw"],
     includes = ["uvw-2.12.1/src"],
 )
@@ -18,8 +18,9 @@ cc_library(
 cc_binary (
     name = "server",
     srcs = [
-        "src/server.cc",
+        "src/server/server.cc",
     ],
     deps = [":server_lib"],
     includes = ["src"],
+    data = glob(["src/clients/**/*"]),
 )
