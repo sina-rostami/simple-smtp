@@ -32,7 +32,21 @@ python3 client.py
 
 ## Example
 
-This is a simple output of client.
+First we must run the server.
+
+```bash
+╰─$ bazel run server --  $(pwd)/src/clients
+INFO: Analyzed target //:server (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //:server up-to-date:
+  bazel-bin/server
+INFO: Elapsed time: 0.125s, Critical Path: 0.01s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Build completed successfully, 1 total action
+```
+
+Now the server is listening, Next we run a client and this is a simple output of the client.
 
 ```bash
 ╰─$ python3 client.py
