@@ -53,6 +53,8 @@ class Client():
             else:
                 print(bcolors.OKGREEN +
                       f"<< {response}" + bcolors.ENDC, end='')
+            if command == 'QUIT':
+                return
 
 
 if __name__ == "__main__":

@@ -22,5 +22,4 @@ cc_binary (
     ],
     deps = [":server_lib"],
     includes = ["src"],
-    data = glob(["src/clients/**/*"]),
 )
